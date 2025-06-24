@@ -1,1 +1,52 @@
-# shadowing-app-spec
+# Shadowing App – Project Specification
+
+An app to help English learners improve their spoken English by mimicking native speech. Users practice by shadowing video/audio clips, recording their voice, and receiving feedback on pronunciation, intonation, and rhythm.
+
+**Tech Stack**
+
+- Frontend: React
+- Backend: Express
+- Audio Analysis: Librosa / Parselmouth (Python), Azure Speech API
+- Media: YouTube API for video import
+
+---
+
+## Requirements
+
+### Core Features
+
+- Import and playback YouTube video segments (10–15 second loopable chunks)
+- Record and playback the user’s voice per segment
+- Side-by-side comparison between native and user audio
+- Visual and textual feedback on:
+  - Pronunciation accuracy (word or syllable level)
+  - Intonation curve and pitch contour
+  - Rhythm and stress timing
+- Daily shadowing challenge with varied content
+- Spaced Repetition engine to help users prioritize weak or missed segments
+
+---
+
+## User Stories
+
+- As a user, I want to import a YouTube video and play it in 10–15 second segments on loop so I can practice naturally.
+- As a learner, I want to record myself repeating a segment so I can hear my performance.
+- As a learner, I want to compare my recording to the native speaker to improve my pronunciation.
+- As a user, I want visual feedback showing pitch and stress so I can better mimic native rhythm.
+- As a returning user, I want to see which segments I’ve improved on and which ones I need to revisit.
+- As a beginner, I want to slow down the playback to better understand pronunciation.
+- As a casual user, I want to use the app without logging in.
+- As a committed learner, I want the app to remind me what I should review based on my past performance.
+
+---
+
+## Spikes (Technical Research)
+
+| Topic                  | Goal                                                                                 | Status      |
+| ---------------------- | ------------------------------------------------------------------------------------ | ----------- |
+| Azure Speech API       | Test pronunciation scoring and speech-to-text accuracy for user recordings           | In progress |
+| YouTube API            | Test video import and segment slicing for shadowing playback                         | In progress |
+| Parselmouth            | Analyze pitch, intonation, and phoneme-level feedback (and visualize it)             | Not started |
+| Librosa vs Parselmouth | Evaluate performance, accuracy, and ease of integration for audio feature extraction | Not started |
+| React Audio Recorder   | Find best library for in-browser recording with waveform preview                     | Not started |
+| Spaced Repetition Algo | Research repetition models (SM-2, Leitner, or custom scoring) for speech segments    | Not started |
