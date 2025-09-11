@@ -316,31 +316,4 @@ router.post("/evaluate-pronunciation", async (req, res) => {
   }
 });
 
-// Helper function to calculate a basic pronunciation score based on recognized text and reference text
-// function calculateBasicPronunciationScore(recognizedText, referenceText) {
-//   const recognizedWords = recognizedText.toLowerCase().split(/\s+/);
-//   const referenceWords = referenceText.toLowerCase().split(/\s+/);
-
-//   let correctWordsCount = 0;
-//   const maxLength = Math.max(recognizedWords.length, referenceWords.length);
-
-//   for (
-//     let i = 0;
-//     i < Math.min(recognizedWords.length, referenceWords.length);
-//     i++
-//   ) {
-//     if (recognizedWords[i] === referenceWords[i]) {
-//       correctWordsCount++;
-//     }
-//   }
-
-//   // Account for completeness (missing or extra words)
-//   const completeness =
-//     Math.min(recognizedWords.length, referenceWords.length) /
-//     referenceWords.length;
-//   const accuracy = correctWordsCount / referenceWords.length;
-
-//   return Math.round(accuracy * completeness * 100);
-// }
-
 export default router;
